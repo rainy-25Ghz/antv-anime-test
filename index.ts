@@ -1,28 +1,32 @@
 // Import stylesheets
 import './style.css';
-
 import { Chart } from '@antv/g2';
+import { animate } from 'popmotion/lib/animations';
 
+const data = [
+  { year: '1951 年', sales: 38 },
+  { year: '1952 年', sales: 52 },
+  { year: '1956 年', sales: 61 },
+  { year: '1957 年', sales: 145 },
+  { year: '1958 年', sales: 48 },
+  { year: '1959 年', sales: 38 },
+  { year: '1960 年', sales: 38 },
+  { year: '1962 年', sales: 38 },
+];
 const chart = new Chart({
   container: 'chart1',
   autoFit: true,
   height: 500,
+  width: 500,
 });
-const data = [
-  { month: '一月', temperature: [-5, 10] },
-  { month: '二月', temperature: [3, 12] },
-];
-chart.line().position('month*temperature');
+
 chart.data(data);
 
-chart.render();
-
-const chart2 = new Chart({
-  container: 'chart2',
-  autoFit: true,
-  height: 500,
+chart.tooltip({
+  showMarkers: false,
 });
-const data2 = [{ month: '一月', temperature: [-5, 10] }];
-chart2.point().position('month*temperature');
-chart2.data(data2);
-chart2.render();
+chart.interaction('active-region');
+
+chart.interval().position('year*sales');
+
+chart.render();

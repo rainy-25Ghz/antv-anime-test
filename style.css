@@ -1,17 +1,18 @@
 h1,
 h2 {
   font-family: Lato;
-  font-size: 72px;
-  background: -webkit-linear-gradient(rgb(233, 15, 15), rgb(241, 140, 24));
+
+  letter-spacing: 0.2rem;
+  background: -webkit-linear-gradient(rgb(201, 23, 53), rgb(174, 0, 218));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  letter-spacing: 0.2rem;
 }
 .container {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10vh;
 }
