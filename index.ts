@@ -23,18 +23,18 @@ const chart = new Chart({
 
 chart.interval().position('year*sales').color('year');
 
-  for (let i = 0; i < data.length; i++)
-    animate({
-      from: Math.ceil(Math.random() * 100) + 10,
-      to: -Math.ceil(Math.random() * 100) + 110,
-      onUpdate: (latest) => {
-        data[i] = { year: data[i].year, sales: latest };
-        chart.data(data);
-        chart.tooltip({
-          showMarkers: false,
-        });
-        chart.interaction('active-region');
-        chart.interval().position('year*sales').color('year');
-        chart.render();
-      },
-    });
+for (let i = 0; i < data.length; i++)
+  animate({
+    from: Math.ceil(Math.random() * 100) + 10,
+    to: -Math.ceil(Math.random() * 100) + 110,
+    onUpdate: (latest) => {
+      data[i] = { year: data[i].year, sales: latest };
+      chart.data(data);
+      chart.tooltip({
+        showMarkers: false,
+      });
+      chart.interaction('active-region');
+      chart.interval().position('year*sales').color('year');
+      chart.render();
+    },
+  });
