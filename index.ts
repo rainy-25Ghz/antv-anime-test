@@ -2,7 +2,7 @@
 import './style.css';
 import { Chart } from '@antv/g2';
 import { animate } from 'popmotion/lib/animations';
-
+const colors=
 const data = [
   { year: '1951 年', sales: 38 },
   { year: '1952 年', sales: 52 },
