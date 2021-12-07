@@ -29,7 +29,7 @@ chart.tooltip({
 chart.interaction('active-region');
 
 chart.interval().position('year*sales').color('year');
-for (let j = 0; j < 1000; j++)
+for (let j = 0; j < 10; j++)
   for (let i = 0; i < data.length; i++)
     animate({
       from: Math.ceil(Math.random() * 100) + 10,
