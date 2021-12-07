@@ -3,9 +3,8 @@ import './style.css';
 
 import { Chart } from '@antv/g2';
 
-
 const chart = new Chart({
-  container: 'container',
+  container: 'chart1',
   autoFit: true,
   height: 500,
 });
@@ -16,5 +15,14 @@ const data = [
 chart.line().position('month*temperature');
 chart.data(data);
 
-
 chart.render();
+
+const chart2 = new Chart({
+  container: 'chart2',
+  autoFit: true,
+  height: 500,
+});
+const data2 = [{ month: '一月', temperature: [-5, 10] }];
+chart2.point().position('month*temperature');
+chart2.data(data2);
+chart2.render();
