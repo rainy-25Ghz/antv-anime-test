@@ -22,7 +22,7 @@ const chart = new Chart({
 });
 
 chart.interval().position('year*sales').color('year');
-for (let j = 0; j < 3; j++)
+
   for (let i = 0; i < data.length; i++)
     animate({
       from: Math.ceil(Math.random() * 100) + 10,
