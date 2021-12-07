@@ -31,11 +31,7 @@ for (let i = 0; i < data.length; i++)
     onUpdate: (latest) => {
       data[i] = { year: data[i].year, sales: latest };
       chart.data(data);
-      chart.tooltip({
-        showMarkers: false,
-      });
-      chart.interaction('active-region');
-      chart.interval().position('year*sales').color('year');
       chart.render();
     },
+    repeat: 100,
   });
